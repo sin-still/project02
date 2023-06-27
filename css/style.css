@@ -4,8 +4,14 @@ body{font-family: sans-serif; background: #ddd;}
 
 
 /* 공통속성 */
-#header{width: 100%;position: fixed;top: 0;left: 0;height: 13rem;background: #fff; padding-top: 1.8rem; border-bottom: 1px solid #f8f8f8;}
+#header{width: 100%;position: fixed;top: 0;left: 0;height: 13rem;background: #fff; padding-top: 1.8rem; border-bottom: 1px solid #f8f8f8; z-index: 9999;}
 .container{padding: 0 8rem;}
+#contentWrap{overflow: hidden; padding-top: 15rem;}
+.clear::after{
+    content: "";
+    display: block;
+    clear: both;
+}
 
 
 /* header */
@@ -110,10 +116,48 @@ body{font-family: sans-serif; background: #ddd;}
 
 
 
+
+/* top-banner */
+
+/* top-banner b-top-content */
+#top-banner .b-top-content{display: flex; margin-bottom: 5rem;}
+.b-top-content .top-con-box .top-con-item{font-size: 24px;font-weight: 700; position: relative; padding: 2rem; box-sizing: border-box;}
+.b-top-content img{width: 100%; height: 100%; object-fit: cover; object-position: center; position: absolute; top: 0;left: 0; display: block;}
+.b-top-content .type01 {width: 25%; box-sizing: border-box; padding: 0 2rem;}
+.b-top-content .type02 {width: 50%; box-sizing: border-box; padding: 0 2rem;}
+.b-top-content .i-type01{height: 50rem;}
+.b-top-content .i-type02{height: 23rem;}
+.b-top-content .i-type03{height: 104rem;}
+
+.b-top-content .top-con-box a{display: block;}
+.b-top-content .top-con-box p{ color: #fff; z-index: 2; position: relative;text-shadow: 1px 1px 5px #222222cb;}
+.b-top-content .mb-1{margin-bottom: 4rem; box-sizing: border-box;}
+.b-top-content .mb-2{margin: 4rem 0; box-sizing: border-box;}
+
+/* top-banner b-btm-content */
+#top-banner .b-btm-content{display: flex;}
+.b-btm-content .btm-con-box{width: 33.333333%; box-sizing: border-box; padding: 0 2rem;}
+.b-btm-content .btm-con-box .btm-con-item{font-size: 24px;font-weight: 700; position: relative; padding: 2rem; box-sizing: border-box;}
+.b-btm-content img{width: 100%; height: 100%; object-fit: cover; object-position: center; position: absolute; top: 0;left: 0; display: block;}
+.b-btm-content .i-type01{height: 50rem;}
+.b-btm-content .i-type02{height: 23rem;}
+.b-btm-content .i-type03{height: 100rem;}
+.b-btm-content .i-type04{height: 73rem;}
+.b-btm-content .mb-1{margin-bottom: 4rem; box-sizing: border-box;}
+.b-btm-content .mt-1{margin-top: 4rem; box-sizing: border-box;}
+
+.b-btm-content .btm-con-box a{display: block;}
+.b-btm-content .btm-con-box p{ color: #fff; z-index: 2; position: relative; text-shadow: 1px 1px 5px #222222cb;}
+
+
+
+
 @media screen and (max-width:1200px){
     
     .container{padding: 0 3rem;}
     .menu-category .container .category-item{width: 140px;}
+    .b-top-content .top-con-box .top-con-item{font-size: 2rem;}
+    .b-btm-content .btm-con-box .btm-con-item{font-size: 2rem;}
 }
 @media screen and (max-width:900px){
     #header .top-right>.desk-b{display: none;}
@@ -121,6 +165,8 @@ body{font-family: sans-serif; background: #ddd;}
     #header .mobile.active{right: 0;} 
     #header .mobile-bg.active{display: block;}
     .menu-category .container .category-item{width: 120px;}
+    .b-top-content .top-con-box .top-con-item{font-size: 1.8rem;}
+    .b-btm-content .btm-con-box .btm-con-item{font-size: 1.8rem;}
 }
 @media screen and (max-width:768px){
     
@@ -134,5 +180,25 @@ body{font-family: sans-serif; background: #ddd;}
     #header .menu-top .top-left ul .logo{width: 123px;}
     .menu-category{display: none;}
     .menu-category.active{display: none;}
+    #contentWrap{padding-top: 11.5rem;}
+    .b-top-content{flex-direction: column;}
+    .b-top-content .top-con-box{width: 100%;}
+    .b-top-content .i-type01{height: 36rem;}
+    .b-top-content .i-type02{height: 18rem;}
+    .b-top-content .i-type03{height: 36rem;}
+    .b-top-content .mb-2{margin: 0;}
+    .b-top-content .top-con-item{margin-bottom: 1.6rem;}
+    .b-top-content .top-con-box .top-con-item{font-size: 2rem;}
+
+    .b-btm-content{flex-direction: column;}
+    .b-btm-content .btm-con-box{width: 100%;}
+    .b-btm-content .i-type01{height: 36rem;}
+    .b-btm-content .i-type02{height: 18rem;}
+    .b-btm-content .i-type03{height: 36rem;}
+    .b-btm-content .i-type04{height: 36rem;}
+    .b-btm-content .mb-2{margin: 0;}
+    .b-btm-content .btm-con-item{margin-bottom: 1.6rem;}
+    .b-btm-content .btm-con-box .btm-con-item{font-size: 2rem;}
+    
     
 }   
