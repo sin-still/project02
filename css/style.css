@@ -196,7 +196,9 @@ body{font-family: sans-serif; background: #ddd;}
     .b-btm-content .i-type02{height: 18rem;}
     .b-btm-content .i-type03{height: 36rem;}
     .b-btm-content .i-type04{height: 36rem;}
+    
     .b-btm-content .mb-2{margin: 0;}
+    .b-btm-content .btm-con-box .mt-1{margin: 0;}
     .b-btm-content .btm-con-item{margin-bottom: 1.6rem;}
     .b-btm-content .btm-con-box .btm-con-item{font-size: 2rem;}
     

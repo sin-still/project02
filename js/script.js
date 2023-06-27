@@ -50,3 +50,84 @@ function toggleMenu(){
     })
 }
 toggleMenu()
+
+
+
+function randomimage(){
+    /* let pairs = [
+        { image: './img/Thum_121-2.jpg', text: '비오는 날 채색하는 <br>아름다운 협업' },
+        { image: './img/Thum_21-4.jpg', text: '셀피마니아를 위한 <br>특별한 포토존, 아트거울' },
+        { image: './img/Thum_1-8.jpg', text: '【내 작품 판매하기】<br>PB Labs의 첫번째 프로젝트를 소개합니다!' },
+        { image: './img/거장의에디션3.jpg', text: '우리집 미술관 <br>마스터피스의 생생한 감동' },
+        { image: './img/Thum_12-11.jpg', text: '호암재단이 선택한 <br>김환기의 40년 예술 여정' },
+        { image: './img/Thum_12-18.jpg', text: '프베랑 썸머, <br>LUCKY BOY EVENT' },
+        { image: './img/Thum_12-16.jpg', text: '다정한 시선이 흐트러지지 않게 <br>윤형택 개인전' },
+        { image: './img/Thum_12-15.jpg', text: '가장 밝은 세상에서 전하는 위로 <br>김제언 인터뷰' },
+        { image: './img/Thum_22-10.jpg', text: '빛의 모습에 따라 <br>달라지는 매력' },
+        { image: './img/Thum_122.jpg', text: 'home sweet home! <br>그레타프리든' },
+        { image: './img/Thum_120-1.png', text: '체감온도 -5° 여름 인테리어 <br>100만원대 이하 에디션 추천'}
+    ]; */
+    let images=[
+        './img/Thum_121-2.jpg',
+        './img/Thum_21-4.jpg',
+        './img/Thum_1-8.jpg',
+        './img/거장의에디션3.jpg',
+        './img/Thum_12-11.jpg',
+        './img/Thum_12-18.jpg',
+        './img/Thum_12-16.jpg',
+        './img/Thum_12-15.jpg',
+        './img/Thum_22-10.jpg',
+        './img/Thum_122.jpg',
+        './img/Thum_120-1.png'
+    ]
+    let texts=[
+        '비오는 날 채색하는 <br>아름다운 협업',
+        '셀피마니아를 위한 <br>특별한 포토존, 아트거울',
+        '【내 작품 판매하기】<br>PB Labs의 첫번째 프로젝트를 소개합니다!',
+        '우리집 미술관 <br>마스터피스의 생생한 감동',
+        '호암재단이 선택한 <br>김환기의 40년 예술 여정',
+        '프베랑 썸머, <br>LUCKY BOY EVENT',
+        '다정한 시선이 흐트러지지 않게 <br>윤형택 개인전',
+        '가장 밝은 세상에서 전하는 위로 <br>김제언 인터뷰',
+        '빛의 모습에 따라 <br>달라지는 매력',
+        'home sweet home! <br>그레타프리든',
+        '체감온도 -5° 여름 인테리어 <br>100만원대 이하 에디션 추천',
+    ]
+    function getRandomPair(pairElement) {
+        var randomIndex = Math.floor(Math.random() * images.length);
+        var randomImage = images[randomIndex];
+        var randomText = texts[randomIndex];
+      
+        // 이미지와 텍스트를 이미 선택된 요소들과 비교하여 중복이면 재선택합니다.
+        var existingPairs = document.getElementsByClassName("con-item");
+        for (var i = 0; i < existingPairs.length; i++) {
+          var imageElement = existingPairs[i].getElementsByClassName("randomImg")[0];
+          var textElement = existingPairs[i].getElementsByClassName("randomText")[0];
+      
+          if (imageElement.src === randomImage || textElement.innerHTML === randomText) {
+            return getRandomPair(pairElement); // 재귀적으로 재선택
+          }
+        }
+      
+        return {
+          image: randomImage,
+          text: randomText
+        };
+      }
+      
+      window.onload = function() {
+        var pairs = document.getElementsByClassName("con-item");
+        for (var i = 0; i < pairs.length; i++) {
+          var pairElement = pairs[i];
+          var pair = getRandomPair(pairElement);
+          var imageElement = pairElement.getElementsByClassName("randomImg")[0];
+          var textElement = pairElement.getElementsByClassName("randomText")[0];
+      
+          imageElement.src = pair.image;
+          textElement.innerHTML = pair.text;
+        }
+      }
+    
+    
+}
+randomimage()
