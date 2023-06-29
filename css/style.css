@@ -193,6 +193,11 @@ body{font-family: sans-serif; /* background: #ddd; */}
 #promotion-section .price span{color: blue;}
 #promotion-section .wish{width: 2.7rem;margin-right: 10px;}
 
+#promotion-section .swiper-pagination{width: 100px;left: 50%;transform: translateX(-50%);}
+#promotion-section .swiperIndexBox{position: absolute; top: 50%;left: 50%; transform: translate(-50%,-50%);display: inline-block; width: 50%; text-align: center; height: 100%; line-height: 45px; font-size: 25px;}
+#promotion-section .swiperBtBox{width: 300px; background: tomato; height: 50px;margin: 0 auto; position: relative; top: -40px;}
+#promotion-section .swiper-button-next::after{display: none;}
+#promotion-section .swiper-button-prev::after{display: none;}
 
 @media screen and (max-width:1200px){
     
@@ -211,7 +216,8 @@ body{font-family: sans-serif; /* background: #ddd; */}
     .b-btm-content .btm-con-box .btm-con-item{font-size: 1.8rem;}
 }
 @media screen and (max-width:768px){
-    
+    .swiper-pagination{display: none;}
+    .swiperBtBox{display: none;}
     #header{height: 9.5rem}
     #header .menu-top .top-mid{display: none;}
     #header .bottom-right{display: none;}

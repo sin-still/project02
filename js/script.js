@@ -134,14 +134,17 @@ randomimage()
 
 // 스와이퍼 인스턴스 생성 및 초기화
 function swSlide(){
+/*   let nowIndex = document.querySelector('.slide-index')
+  let slideLength = document.querySelector('.slide-length')
+  let nextBt=querySelector('.swiper-button-next')
+  let prevBt=querySelector('.swiper-button-prev') */
   var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 20,
-    centeredSlides: true,
     
     pagination: {
       el: ".swiper-pagination",
-      clickable: true,
+      type: "fraction",
     },
     /* autoHeight:true, */
     breakpoints: {
@@ -151,25 +154,35 @@ function swSlide(){
         spaceBetween: 30,
       },
       968: {
-        slidesPerView: 3,  //브라우저가 1024보다 클 때
+        slidesPerView: 3,  //브라우저가 968보다 클 때
         spaceBetween: 30,
       },
       1400: {
-        slidesPerView: 4,  //브라우저가 1024보다 클 때
+        slidesPerView: 4,  //브라우저가 1400보다 클 때
         spaceBetween: 30,
       },
     },
-  
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+      
+    },
+    
+  });
+  swiper.on('transitionEnd', function() {
+    console.log('now index :::', swiper.realIndex);
   });
   
   // 스와이퍼 이동값 출력
-  console.log(swiper.translate);
   
+
+  
+  /* nowIndex.innerText = swiper.realIndex+1; */
   // 이동값 변경 및 업데이트
   
   
-   let slideBox = document.querySelector('.swiper-wrapper') 
+/*    let slideBox = document.querySelector('.swiper-wrapper') 
   
-  slideBox.style.transform = 'translate3d(0,0,0)'; 
+  slideBox.style.transform = 'translate3d(0,0,0)';  */
 }
 swSlide()
