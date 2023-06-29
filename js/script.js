@@ -133,23 +133,43 @@ function randomimage(){
 randomimage()
 
 // 스와이퍼 인스턴스 생성 및 초기화
-var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 4,
-  spaceBetween: 30,
-  centeredSlides: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-
-});
-
-// 스와이퍼 이동값 출력
-console.log(swiper.translate);
-
-// 이동값 변경 및 업데이트
-
-
- let slideBox = document.querySelector('.swiper-wrapper') 
-
-slideBox.style.transform = 'translate3d(0,0,0)'; 
+function swSlide(){
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 20,
+    centeredSlides: true,
+    
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    /* autoHeight:true, */
+    breakpoints: {
+        
+      768: {
+        slidesPerView: 2,  //브라우저가 768보다 클 때
+        spaceBetween: 30,
+      },
+      968: {
+        slidesPerView: 3,  //브라우저가 1024보다 클 때
+        spaceBetween: 30,
+      },
+      1400: {
+        slidesPerView: 4,  //브라우저가 1024보다 클 때
+        spaceBetween: 30,
+      },
+    },
+  
+  });
+  
+  // 스와이퍼 이동값 출력
+  console.log(swiper.translate);
+  
+  // 이동값 변경 및 업데이트
+  
+  
+   let slideBox = document.querySelector('.swiper-wrapper') 
+  
+  slideBox.style.transform = 'translate3d(0,0,0)'; 
+}
+swSlide()
