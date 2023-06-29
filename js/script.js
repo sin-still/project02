@@ -132,12 +132,24 @@ function randomimage(){
 }
 randomimage()
 
+// 스와이퍼 인스턴스 생성 및 초기화
 var swiper = new Swiper(".mySwiper", {
-    slidesPerView: 4,
-    spaceBetween: 30,
-    centeredSlides: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-  });
+  slidesPerView: 4,
+  spaceBetween: 30,
+  centeredSlides: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+
+});
+
+// 스와이퍼 이동값 출력
+console.log(swiper.translate);
+
+// 이동값 변경 및 업데이트
+
+
+ let slideBox = document.querySelector('.swiper-wrapper') 
+
+slideBox.style.transform = 'translate3d(0,0,0)'; 
