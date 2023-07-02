@@ -25,6 +25,7 @@ function mainMenu() {
     });
 }
 mainMenu()
+
 //모바일메뉴
 function toggleMenu(){
     const mobileBtn=document.querySelector('.desk-n .menu');
@@ -51,8 +52,7 @@ function toggleMenu(){
 }
 toggleMenu()
 
-
-
+/* 랜덤이미지 */
 function randomimage(){
     /* let pairs = [
         { image: './img/Thum_121-2.jpg', text: '비오는 날 채색하는 <br>아름다운 협업' },
@@ -186,3 +186,17 @@ function swSlide(){
   slideBox.style.transform = 'translate3d(0,0,0)';  */
 }
 swSlide()
+
+//푸터인포
+function footerinfo(){
+  let footerBtn = document.getElementsByClassName('d-hidden')
+  let mHedden = document.getElementsByClassName('m-hidden')
+  for(let i=0;i<footerBtn.length;i++){
+    footerBtn[i].addEventListener('click',function(){
+      mHedden[i].classList.toggle('active');
+      footerBtn[i].classList.toggle('active');
+      console.log(i)
+    })
+  }
+}
+footerinfo()
