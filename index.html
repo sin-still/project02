@@ -65,7 +65,7 @@
 						</div>
 						<div class="top-right">
 							<ul class="desk-b">
-								<li class="login"><a href="#">로그인</a></li>
+								<li class="loginPageBt"><a href="#">로그인</a></li>
 								<li class="membership"><a href="#">회원가입</a></li>
 								<li class="wish"><a href="#"><img src="./img/icon_wish.png" alt="위시"></a></li>
 								<li class="cart">
@@ -132,7 +132,7 @@
 						<li><a href="#">뉴스레터</a></li>
 					</ul>
 					<ul class="mobile-member">
-						<li><a href="#">로그인</a></li>
+						<li class="loginPageBt"><a href="#">로그인</a></li>
 						<li><a href="#">회원가입</a></li>
 					</ul>
 					<div class="lang">
@@ -140,6 +140,32 @@
 							<option value="KOR">KOR</option>
 							<option value="ENG">ENG</option>
 						</select>
+					</div>
+				</div>
+				<div class="login-bg"></div>
+				<div class="loginPage">
+					<div class="loginWrap">
+						<h2 class="login-logo"><img src="./img/logo.svg" alt="로고"></h2>
+						<form id="loginForm">
+							<label for="userId" class="">아이디</label>
+							<input type="text" id="userId" class="idBox" placeholder="ID" name="userId">
+							<label for="userId" class="">비밀번호</label>
+							<input type="password" id="userPw" class="pwBox" placeholder="PW" name="userPw">
+							<hr>
+							<div class="loginBtnBox">
+								<button type="submit" class="loginBt login-p">로그인</button>
+								<button type="submit" class="loginBt login-n">네이버 로그인</button>
+								<button type="submit" class="loginBt login-k">카카오 로그인</button>
+							</div>
+							<div class="membershipBox">
+								<ul class="membershipList">
+									<li><a href="javascript:">아이디 찾기</a></li>
+									<li><a href="javascript:">비밀번호 찾기</a></li>
+									<li><a href="javascript:"> 회원가입</a></li>
+								</ul>
+							</div>
+						</form>
+
 					</div>
 				</div>
 			</div>
