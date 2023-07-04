@@ -32,6 +32,7 @@ function toggleMenu() {
   const mobileCBtn = document.querySelector('.mobile .m-close');
   const mobileMenu = document.querySelector('.mobile');
   const mobileBg = document.querySelector('.mobile-bg');
+  
 
   //버튼클릭시 모바일 메뉴 블럭
   mobileBtn.addEventListener('click', function () {
@@ -49,6 +50,8 @@ function toggleMenu() {
     mobileMenu.classList.remove('active')
 
   })
+  
+  
 }
 toggleMenu()
 function loginPage() {
@@ -56,6 +59,9 @@ function loginPage() {
   // const loginCBtn=document.querySelector('.mobile .m-close');
   const loginPage = document.querySelector('.loginPage');
   const loginBg = document.querySelector('.login-bg');
+  const mLoginPageBt = document.querySelector('.m-loginPageBt')
+  const mobileMenu = document.querySelector('.mobile');
+  const mobileBg = document.querySelector('.mobile-bg');
 
   loginBtn.addEventListener('click',function(){
     loginBg.classList.add('active')
@@ -64,8 +70,13 @@ function loginPage() {
   loginBg.addEventListener('click', function () {
     loginBg.classList.remove('active')
     loginPage.classList.remove('active')
-
   })
+  mLoginPageBt.addEventListener('click',function(){
+    loginBg.classList.add('active')
+    loginPage.classList.add('active')
+    mobileBg.classList.remove('active')
+    mobileMenu.classList.remove('active')
+  })  
 
 }
 loginPage() 

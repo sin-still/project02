@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<title>     </title>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<meta name='Title' content=''>
+<meta name='Subject' content=''>
+<meta name='Keywords' content=''>
+<meta name='Author' content=''>
+<meta name='Publisher' content=''>
+<meta name='Description' content=''>
+<meta name='Author-Date' content=''>
+<meta name='Copyright' content=''>
+
+<!-- 접근성 텍스트(skip) 숨김 -->
+<style>#skip{overflow: hidden; position:absolute; width:0; height:0; line-height:0; text-indent:-9999px;}</style>
+
+<!-- 폰트어썸 -->
+<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU' crossorigin='anonymous'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel="stylesheet" href="../XEIcon-2.2.0/xeicon.min.css">
+<!-- 구글폰트 아이콘 -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0' />
+
+<!-- CSS 리셋 -->
+<link rel='stylesheet' href='../css/reset.css'>
+
+<!-- 제이쿼리 3.7 CDN -->
+<script src='https://code.jquery.com/jquery-3.7.0.min.js' crossorigin='anonymous'></script>
+
+<!-- 로컬 CSS -->
+<link rel='stylesheet' href='./css/style.css'/>
+
+<!-- 로컬 js -->
+<script src='./js/script.js' defer></script>
+
+</head>
+<body>
+<!-- 시각장애인 웹 접근성을 위한 skip _ 지우지않아도 됩니다. -->
+
+<ul id='skip'>
+   <li><a href='#header'>헤더 바로가기</a></li>
+   <li><a href='#nav'>메뉴 바로가기</a></li>
+   <li><a href='#content'>내용 바로가기</a></li>
+</ul>
+
+<!-- 공백을 위한 공간입니다. -->
+<div id="wrap">
+    <header id="header">
+        <div class="container">
+            <div class="menu">
+                <div class="menu-top">
+                    <div class="top-left">
+                        <ul>
+                            <li class="logo"><a href="index.html"><img src="../img/logo.svg" alt="로고"></a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="top-mid">
+                        <ul>
+                            <li class="search-wrap">
+                                <form action="#" id="searchForm">
+                                    <div class="searchBox">
+                                        <input type="image" src="../img/icon_search.svg" class="btnSearch">
+                                        <input type="text" id="search" name="search" placeholder="일상의 예술을 맛보다,프린트베이커리">
+                                    </div>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="top-right">
+                        <ul class="desk-b">
+                            <li class="loginPageBt"><a href="#">로그인</a></li>
+                            <li class="membership"><a href="#">회원가입</a></li>
+                            <li class="wish"><a href="#"><img src="../img/icon_wish.png" alt="위시"></a></li>
+                            <li class="cart">
+                                <div>
+                                    <span>0</span>
+                                    <img src="../img/icon_cart.svg" alt="카트">
+                                </div>
+                            </li>
+                            <li class="lang">
+                                <select name="lang" class="lang-seclect">
+                                    <option value="KOR">KOR</option>
+                                    <option value="ENG">ENG</option>
+                                </select>
+                            </li>
+                        </ul>
+                        <ul class="desk-n">
+                            <li class="wish">
+                                <a href="#"><img src="../img/icon_wish.png" alt="위시"></a>
+                            </li>
+                            <li class="cart">
+                                <div>
+                                    <span>0</span>
+                                    <img src="../img/icon_cart.svg" alt="카트">
+                                </div>
+                            </li>
+                            <li class="menu">
+                                <img src="../img/icon_hamburger.svg" alt="메뉴">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu-bottom">
+                    <div class="bottom-left">
+                        <ul class="main-menu">
+                            <li class="m-menu"><a href="#">프로모션</a></li>
+                            <li class="m-menu"><a href="#">아트</a></li>
+                            <li class="m-menu"><a href="#">리빙</a></li>
+                            <li class="m-menu"><a href="#">가구</a></li>
+                            <li><a href="#">프리미엄</a></li>
+                            <li><a href="#">아티스트</a></li>
+                        </ul>
+                    </div>
+                    <div class="bottom-right">
+                        <div class="benefit-list">
+                            <a href="#">프린트베이커리 회원혜택</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-bg"></div>
+             <div class="mobile">
+                <button class="m-close"><i class="xi-close x-icon" alt="메뉴닫기"></i></button>
+                <ul class="mobile-memu">
+                    <li><a href="#">프로모션</a></li>
+                    <li><a href="#">아트</a></li>
+                    <li><a href="#">리빙</a></li>
+                    <li><a href="#">가구</a></li>
+                    <li><a href="#">프리미엄</a></li>
+                    <li><a href="#">아티스트</a></li>
+                </ul>
+                <ul class="mobile-sub">
+                    <li><a href="#">위베이크</a></li>
+                    <li><a href="#">전시소식</a></li>
+                    <li><a href="#">뉴스레터</a></li>
+                </ul>
+                <ul class="mobile-member">
+                    <li ><a href="#" class="m-loginPageBt">로그인</a></li>
+                    <li><a href="#">회원가입</a></li>
+                </ul>
+                <div class="lang">
+                    <select name="lang" class="lang-seclect">
+                        <option value="KOR">KOR</option>
+                        <option value="ENG">ENG</option>
+                    </select>
+                </div>
+            </div>
+            <div class="login-bg"></div>
+            <div class="loginPage">
+                <div class="loginWrap">
+                    <h2 class="login-logo"><img src="../img/logo.svg" alt="로고"></h2>
+                    <form id="loginForm">
+                        <label for="userId" class="">아이디</label>
+                        <input type="text" id="userId" class="idBox" placeholder="ID" name="userId">
+                        <label for="userId" class="">비밀번호</label>
+                        <input type="password" id="userPw" class="pwBox" placeholder="PW" name="userPw">
+                        <hr>
+                        <div class="loginBtnBox">
+                            <button type="submit" class="loginBt login-p">로그인</button>
+                            <button type="submit" class="loginBt login-n">네이버 로그인</button>
+                            <button type="submit" class="loginBt login-k">카카오 로그인</button>
+                        </div>
+                        <div class="membershipBox">
+                            <ul class="membershipList">
+                                <li><a href="javascript:">아이디 찾기</a></li>
+                                <li><a href="javascript:">비밀번호 찾기</a></li>
+                                <li><a href="javascript:"> 회원가입</a></li>
+                            </ul>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        <div class="menu-category">
+            <div class="container">
+                <div class="category-list c-promotion">
+                    <div class="category-item"><a href="#">
+                        <img src="../img/Thum_22-5.jpg" alt="전체이미지">
+                        <p>전체</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/category_banner_5.jpg" alt="큐레이션이미지">
+                        <p>큐레이션</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/category_banner_6.jpg" alt="이벤트이미지">
+                        <p>이벤트</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/category_banner_9.jpg" alt="선물제안이미지">
+                        <p>선물제안</p>
+                    </a></div>
+                </div>
+                <div class="category-list c-art">
+                    <div class="category-item"><a href="#">
+                        <img src="../img/Thum_11-17.jpg" alt="아트이미지1">
+                        <p>전체</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴01.png" alt="아트이미지2">
+                        <p>베스트</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴02.png" alt="아트이미지3">
+                        <p>오리지널</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴03.png" alt="아트이미지4">
+                        <p>리미티드에디션</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴04-1.png" alt="아트이미지5">
+                        <p>아트포스터</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴05.png" alt="아트이미지6">
+                        <p>아트북</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴06.png" alt="아트이미지7">
+                        <p>골프</p>
+                    </a></div>
+                </div>
+                <div class="category-list c-living">
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴19.png" alt="리빙메뉴이미지">
+                        <p>전체</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴18-2.png" alt="리빙메뉴이미지">
+                        <p>LAik / GIFT</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/category_banner_18.jpg" alt="리빙메뉴이미지">
+                        <p>테이블웨어</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/category_banner_12.jpg" alt="리빙메뉴이미지">
+                        <p>오브제</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴07.png" alt="리빙메뉴이미지">
+                        <p>프래그런스</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴08.png" alt="리빙메뉴이미지">
+                        <p>패브릭</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴09-1.png" alt="리빙메뉴이미지">
+                        <p>월데코</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴10.png" alt="리빙메뉴이미지">
+                        <p>토이</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴11-1.png" alt="리빙메뉴이미지">
+                        <p>피크닉/캠핑</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴12.png" alt="리빙메뉴이미지">
+                        <p>데스크</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴20.png" alt="리빙메뉴이미지">
+                        <p>푸드</p>
+                    </a></div>
+                </div>
+                <div class="category-list c-furniture">
+                    <div class="category-item"><a href="#">
+                        <img src="../img/Thum_21-3.jpg" alt="가구메뉴이미지1">
+                        <p>전체</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴14.png" alt="가구메뉴이미지1">
+                        <p>조명</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴15.png" alt="가구메뉴이미지2">
+                        <p>테이블</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴16-1.png" alt="가구메뉴이미지3">
+                        <p>체어</p>
+                    </a></div>
+                    <div class="category-item"><a href="#">
+                        <img src="../img/메뉴17-1.png" alt="가구메뉴이미지4">
+                        <p>스토리지</p>
+                    </a></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="membershipWrap">
+        <div class="container">
+            <div class="membership-content">
+                <div class="membership-title-box">
+                    <h2>
+                        <span>일상의 예술을 맛보다,</span>
+                        <strong>Print Bakery</strong>
+                    </h2>
+                </div>
+                <br>
+                <hr>
+                <br>
+                <fieldset class="signUpArea">
+                    <legend class="ir_so">회원가입</legend>
+                    <form action="#" method="post" name="signUp" id="signUp">
+                        <ul>
+                            <li id="id-section">
+                                <div class="area-style">
+                                    <label for="idArea" class="label-style">아이디</label>
+                                    <input type="text" id="idArea" class="input-style" required size="20" >
+                                    <button class="btn-style">중복확인</button>
+                                    <span id="idMes" class="Mes-style"></span>
+                                    <p class="help-style"><i class="xi-info-o"> 영문소문자/숫자, 4-16자</i></p>
+                                </div>
+                            </li>
+                            <li id="pw-section">
+                                <div class="area-style">
+                                    <label for="pwArea" class="label-style">비밀번호</label>
+                                    <input type="password" id="pwArea" class="input-style" required size="20" >
+                                    <span id="pwMes" class="Mes-style"></span>
+                                    <p class="help-style"><i class="xi-info-o"></i> 영문대소문자/숫자/특수문자 조합, 8 ~ 16자</p>
+    
+                                    <br>
+    
+                                    <label for="pwArea2" class="label-style">비밀번호 확인</label>
+                                    <input type="password" id="pwArea2" class="input-style" required size="20" >
+                                    <span id="pwMes2" class="Mes-style"></span>
+                                </div>
+                            </li>
+                            <li id="name-section">
+                                <div class="area-style">
+                                    <label for="nameArea" class="label-style">이름</label>
+                                    <input type="text" id="nameArea" class="input-style" required size="20" >
+                                    <span id="nameMes" class="Mes-style"></span>
+                                </div>
+                            </li>
+                            <li id="address-section">
+                                <div class="area-style">
+                                    <label for="adrArea1" class="label-style">주소</label>
+                                    <input type="text" id="adrArea1" class="input-style mb10" required size="20" placeholder="우편번호">
+                                    <button class="btn-style">주소검색</button>
+                                    <input type="text" id="adrArea2" class="input-style" required size="20" placeholder="상세주소">
+                                    <span id="adrMes" class="Mes-style"></span>
+                                </div>
+                            </li>
+                            <li id="phone-section">
+                                <div class="area-style">
+                                    <label for="phoneArea1" class="label-style">휴대전화</label>
+                                    <select name="phoneNumber" id="phoneNumber" class="select-style">
+                                        <option value="010">010</option>
+                                        <option value="011">011</option>
+                                        <option value="016">016</option>
+                                        <option value="017">017</option>
+                                        <option value="018">018</option>
+                                        <option value="019">019</option>
+                                    </select>
+                                    -
+                                    <input type="text" id="phoneArea1" class="input-style2" required size="20" >
+                                    -
+                                    <input type="text" id="phoneArea2" class="input-style2" required size="20" >
+                                    <span id="phoneMes" class="Mes-style"></span>
+                                </div>
+                            </li>
+                            <li id="email-section">
+                                <div class="area-style">
+                                    <label for="emailArea" class="label-style">E-mail</label>
+                                    <input type="text" id="emailArea" class="input-style" required size="30" >
+                                    <span id="emailMes" class="Mes-style"></span>
+                                </div>
+                            </li>
+                            <li id="gender-section">
+                                <div class="area-style">
+                                    <input type="radio" id="female" class="gender" name="gender">
+                                    <label for="female" class="label-style2">여성</label>
+                                    <input type="radio" id="male" class="gender" name="gender">
+                                    <label for="male" class="label-style2">남성</label>
+                                    <span id="genderMes" class="Mes-style"></span>
+                                </div>
+                            </li>
+                            <li id="birth-section">
+                                <div class="area-style">
+                                    <label for="birthArea" class="label-style">생년월일</label>
+                                    <input type="text" id="birthArea" class="input-style" required size="8">
+                                    <span id="birthMes" class="Mes-style"></span>
+                                    <p class="help-style"><i class="xi-info-o"></i> - 를 제외한 8글자 ex) 19990514</p>
+                                </div>
+                            </li>
+                            <br>
+                            <hr>
+                            <br>
+                            <li id="terms-section">
+                                <input type="checkbox" id="allCheck" class="check-style">
+                                <label for="allCheck">이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다.</label> 
+                                <br>
+                                <h2>[필수] 이용약관 동의</h2>
+                                <div class="termsBox">
+                                    ■ 수집하는 개인정보 항목
+                                    <br>
+                                    회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+                                    <p>
+                                        ο 수집항목 : 이름 , 생년월일 , 성별 , 로그인ID , 비밀번호 , 비밀번호 질문과 답변 , 자택 전화번호 , 자택 주소 , 휴대전화번호 , 이메일 , 직업 , 회사명 , 부서 , 직책 , 회사전화번호 , 취미 , 결혼여부 , 기념일 , 법정대리인정보 , 서비스 이용기록 , 접속 로그 , 접속 IP 정보 , 결제기록
+                                        <br>
+                                        ο 개인정보 수집방법 : 홈페이지(회원가입) , 서면양식
+                                    </p>
+                                    <p>
+                                        ■ 개인정보의 수집 및 이용목적
+                                    </p>
+                                    <p>
+                                        회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.
+                                    </p>
+                                    <p>
+                                        ο 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산 콘텐츠 제공 , 구매 및 요금 결제 , 물품배송 또는 청구지 등 발송
+                                        <br>
+                                        ο 회원 관리
+                                        <br>
+                                        회원제 서비스 이용에 따른 본인확인 , 개인 식별 , 연령확인 , 만14세 미만 아동 개인정보 수집 시 법정 대리인 동의여부 확인 , 고지사항 전달 ο 마케팅 및 광고에 활용
+                                        <br>
+                                        접속 빈도 파악 또는 회원의 서비스 이용에 대한 통계
+                                    </p>
+                                    <p>
+                                        ■ 개인정보의 보유 및 이용기간
+                                    </p>
+                                    <p>
+                                        회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외 없이 해당 정보를 지체 없이 파기합니다.</p>
+                                </div>
+                                <p>
+                                    <span>이용약관에 동의하십니까? </span>
+                                    <input type="checkbox" id="terms-check1" class="check-style">
+                                    <label for="terms-check1"> 동의함</label>
+                                </p>
+                                <h2>[필수] 개인정보 수집 및 이용 동의</h2>
+                                <div class="termsBox">
+                                    ■ 수집하는 개인정보 항목
+                                    <br>
+                                    회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+                                    <p>
+                                        ο 수집항목 : 이름 , 생년월일 , 성별 , 로그인ID , 비밀번호 , 비밀번호 질문과 답변 , 자택 전화번호 , 자택 주소 , 휴대전화번호 , 이메일 , 직업 , 회사명 , 부서 , 직책 , 회사전화번호 , 취미 , 결혼여부 , 기념일 , 법정대리인정보 , 서비스 이용기록 , 접속 로그 , 접속 IP 정보 , 결제기록
+                                        <br>
+                                        ο 개인정보 수집방법 : 홈페이지(회원가입) , 서면양식
+                                    </p>
+                                    <p>
+                                        ■ 개인정보의 수집 및 이용목적
+                                    </p>
+                                    <p>
+                                        회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.
+                                    </p>
+                                    <p>
+                                        ο 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산 콘텐츠 제공 , 구매 및 요금 결제 , 물품배송 또는 청구지 등 발송
+                                        <br>
+                                        ο 회원 관리
+                                        <br>
+                                        회원제 서비스 이용에 따른 본인확인 , 개인 식별 , 연령확인 , 만14세 미만 아동 개인정보 수집 시 법정 대리인 동의여부 확인 , 고지사항 전달 ο 마케팅 및 광고에 활용
+                                        <br>
+                                        접속 빈도 파악 또는 회원의 서비스 이용에 대한 통계
+                                    </p>
+                                    <p>
+                                        ■ 개인정보의 보유 및 이용기간
+                                    </p>
+                                    <p>
+                                        회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외 없이 해당 정보를 지체 없이 파기합니다.</p>
+                                </div>
+                                <p>
+                                    <span>개인정보 수집 및 이용에 동의하십니까? </span>
+                                    <label for="terms-check2"> 동의함</label>
+                                    <input type="checkbox" id="terms-check2" class="check-style">
+                                </p>
+                                <h2>[필수] 쇼핑정보 수신 동의</h2>
+                                <div class="termsBox">
+                                    ■ 수집하는 개인정보 항목
+                                    <br>
+                                    회사는 회원가입, 상담, 서비스 신청 등등을 위해 아래와 같은 개인정보를 수집하고 있습니다.
+                                    <p>
+                                        ο 수집항목 : 이름 , 생년월일 , 성별 , 로그인ID , 비밀번호 , 비밀번호 질문과 답변 , 자택 전화번호 , 자택 주소 , 휴대전화번호 , 이메일 , 직업 , 회사명 , 부서 , 직책 , 회사전화번호 , 취미 , 결혼여부 , 기념일 , 법정대리인정보 , 서비스 이용기록 , 접속 로그 , 접속 IP 정보 , 결제기록
+                                        <br>
+                                        ο 개인정보 수집방법 : 홈페이지(회원가입) , 서면양식
+                                    </p>
+                                    <p>
+                                        ■ 개인정보의 수집 및 이용목적
+                                    </p>
+                                    <p>
+                                        회사는 수집한 개인정보를 다음의 목적을 위해 활용합니다.
+                                    </p>
+                                    <p>
+                                        ο 서비스 제공에 관한 계약 이행 및 서비스 제공에 따른 요금정산 콘텐츠 제공 , 구매 및 요금 결제 , 물품배송 또는 청구지 등 발송
+                                        <br>
+                                        ο 회원 관리
+                                        <br>
+                                        회원제 서비스 이용에 따른 본인확인 , 개인 식별 , 연령확인 , 만14세 미만 아동 개인정보 수집 시 법정 대리인 동의여부 확인 , 고지사항 전달 ο 마케팅 및 광고에 활용
+                                        <br>
+                                        접속 빈도 파악 또는 회원의 서비스 이용에 대한 통계
+                                    </p>
+                                    <p>
+                                        ■ 개인정보의 보유 및 이용기간
+                                    </p>
+                                    <p>
+                                        회사는 개인정보 수집 및 이용목적이 달성된 후에는 예외 없이 해당 정보를 지체 없이 파기합니다.</p>
+                                </div>
+                                <p>
+                                    <span>SMS 수신을 동의하십니까? </span>
+                                    <input type="checkbox" id="terms-check3" class="check-style">
+                                    <label for="terms-check3"> 동의함</label>
+                                </p>
+                            </li>
+                            <li id="submit-section">
+                                <button type="submit" class="submit-style">회원가입</button>
+                            </li>
+                        </ul>
+                    </form>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
