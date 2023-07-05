@@ -20,7 +20,7 @@ a{text-decoration: none;}
 #header .menu-bottom{display: flex; justify-content: space-between;padding-top: 2rem;}
 /* header-top-left */
 #header .menu-top .top-left{/* flex-basis: 50%; */}
-#header .menu-top .top-right{ }
+
 #header .menu-top .top-left ul{display: flex;height: 4rem; align-items: center;justify-content:start;}
 #header .menu-top .top-left ul .logo {margin-right: 3rem;/*  width: 40%; */}
 #header .menu-top .top-left ul li{position: relative;}
@@ -68,7 +68,7 @@ a{text-decoration: none;}
 #header .bottom-right a{position: relative; padding: .6rem 1.4rem .6rem 3.5rem;font-size: 1.1rem; color: #444; background: #f8f8f8;border-radius: 4px;}
 #header .bottom-right a::before{
     content: "";
-    background: url(../../img/icon_info.svg) no-repeat center;
+    background: url(../img/icon_info.svg) no-repeat center;
     display: block;
     position: absolute;
     top: 0;left: .5rem;
@@ -108,8 +108,10 @@ a{text-decoration: none;}
 /* loginPage */
 .login-bg.active{display: block;}
 .loginPage.active{display: block;}
+
 .login-bg{display: none; width: 100%;height: 100%; background: rgba(0, 0, 0, .6); position: fixed; top: 0; left: 0; z-index: 20;/*  display: none; */}
-.loginPage{display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 500px; height: 80%; padding: 10px; background:#fff; box-sizing: border-box; transition: .3s; opacity: 1; z-index: 25;border-radius: 20px;}
+.loginPage{display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-50%); width: 500px; /* height: 80%; */ padding: 10px; background:#fff; box-sizing: border-box; transition: .3s; opacity: 1; z-index: 25;border-radius: 20px; }
+.loginPage .loginPage-close{background: #fff; position: absolute; top: 2rem; right: 2rem; font-size: 20px; border-radius: 5px; border: 1px solid #ddd; width: 30px; height: 30px; cursor: pointer;}
 .loginPage .loginWrap{width: 480px;height: 80%; margin: 100px auto; background: #fff;}
 .loginPage .loginWrap .login-logo{text-align: center;padding: 0 30px; margin-bottom: 20px;}
 .loginPage .loginWrap .login-logo img{width: 80%;}
@@ -119,7 +121,6 @@ a{text-decoration: none;}
 
 #loginForm input::placeholder{font-weight: normal; font-size: 15px;}
 #loginForm hr{margin-top: 80px; margin-bottom: 30px;}
-#loginForm .loginBtnBox {}
 #loginForm button {width: 100%; height: 50px; margin-bottom: 20px; border-radius: 10px;background: #fff; border: 2px solid #00000042;font-size: 16px;}
 #loginForm .login-p{background: #222; color: #fff; font-size: 17px;}
 #loginForm .membershipList{display: flex;justify-content: center; align-items: center;}
@@ -150,6 +151,7 @@ a{text-decoration: none;}
 
 .menu-category .container .category-list.active{display: flex; flex-wrap: wrap; justify-content: center;}
 .menu-category.active{display: block;}
+
 
 /* membershipWrap */
 
@@ -190,7 +192,9 @@ a{text-decoration: none;}
     
     .container{padding: 0 3rem;}
     .menu-category .container .category-item{width: 140px;}
-
+    .loginPage{height: 80vh; overflow: scroll;}
+    .membershipWrap .membership-content{width: 100%;}
+    
 
    
 }
@@ -200,7 +204,7 @@ a{text-decoration: none;}
     #header .mobile.active{right: 0;} 
     #header .mobile-bg.active{display: block;}
     .menu-category .container .category-item{width: 120px;}
-
+    
 }
 @media screen and (max-width:768px){
     .swiper-pagination{display: none;}
@@ -215,7 +219,12 @@ a{text-decoration: none;}
     #header .menu-top .top-left ul .logo{width: 123px;}
     .menu-category{display: none;}
     .menu-category.active{display: none;}
-
+    #signUp{width: 100%;}
+    .signUpArea{width: 100%; box-sizing: border-box;}
+    .signUpArea .input-style{width: 70%;}
+    .signUpArea .input-style2{width: 30%;}
+    .signUpArea .select-style{width: 30%;}
+    #terms-section{width: 100%; box-sizing: border-box;}
     
     
 }   
@@ -223,10 +232,41 @@ a{text-decoration: none;}
 @media screen and (max-width:568px){
 
     #header .bottom-left .main-menu{font-size: 1.4rem;}
-
+    .loginPage{width: 100%; overflow: scroll; height: 100vh;}
+    .loginPage {border-radius: 0;}
+    .loginPage .loginWrap{width: 100%; margin-top: 30px;}
+    #loginForm .membershipList li{font-size: 12px;}
+    #loginForm hr{margin-top: 40px;}
+    .signUpArea .btn-style{font-size:9px}
 }   
 @media screen and (max-width:400px){
 
     #header .bottom-left .main-menu{font-size: 1.2rem;}
+    .membershipWrap .membership-title-box h2{padding-right: 0; font-size: 18px;}
+    .membershipWrap .membership-title-box h2 span{font-size: 20px;}
+    .signUpArea .area-style{padding: 0;}
+    .signUpArea{padding: 10px 20px 10px 0px}
+    #signUp{padding-left: 0;}
+    .signUpArea .input-style{font-size:12px; width: 100%;}
+    .signUpArea .input-style2{font-size:12px; width: 95%; margin-bottom: 10px;}
+    .signUpArea .select-style{font-size:12px; width: 95%; margin-bottom: 10px;}
+    .signUpArea .label-style{font-size:10px}
+    .signUpArea .label-style2{font-size:10px}
+    .signUpArea .btn-style{font-size:9px ;margin-top: 10px; width: 100%; margin-bottom: 10px;}
+    .signUpArea .check-style{}
+    .signUpArea .mb10{margin-bottom: 0;}
+    .membershipWrap{padding-top: 15rem;}
 
 }   
+
+
+@media screen and (max-width:300px){
+
+    #header .menu-top .top-left ul .logo{width: 90px;}
+    #header .bottom-left .main-menu li {padding-right: 1rem;}
+    #header .top-right>ul>.cart{padding: 0 1rem;}
+    #header .top-right>ul>.wish{padding-left: 0rem; padding-right: 1rem;}
+    #header .top-right>ul>li:first-child{border: none;}
+    #footer .footer-row-right .f-snsBox li{margin-left: 10px;}
+    
+}
