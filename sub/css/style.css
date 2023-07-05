@@ -156,20 +156,20 @@ a{text-decoration: none;}
 /* membership-title-box */
 .membershipWrap{width: 100%; padding-top: 20rem;}
 .membershipWrap .membership-content{width: 70rem ; margin: 0 auto;}
-.membershipWrap .membership-title-box h2{font-family: 'Caveat', cursive; font-size: 30px;font-weight: bold;}
-.membershipWrap .membership-title-box h2 strong{text-align: right;display: block; width: 55%;}
-.membershipWrap .membership-title-box h2 span{display: block; font-size: 32px; font-weight: 500;font-family: 'Archivo Black', sans-serif;}
+.membershipWrap .membership-title-box h2{font-family: 'Noto Sans KR', sans-serif; font-size: 30px;font-weight: bold; letter-spacing: -1px; text-align: right; padding-right: 50px;}
+.membershipWrap .membership-title-box h2 strong{text-align: right;display: block;margin-top: 10px}
+.membershipWrap .membership-title-box h2 span{display: block; font-size: 32px; font-weight: 500;font-family: 'Noto Sans KR', sans-serif;;}
 
 /* signUpArea */
 .signUpArea li{margin-bottom: 30px;}
 .signUpArea .mb10{margin-bottom: 10px;}
-.signUpArea{padding: 5rem;}
+.signUpArea{padding:1rem 5rem 5rem 5rem;}
 
 #signUp{margin: 0 auto; width: 500px;/*  background: yellow; */padding: 20px;} 
 .signUpArea .label-style{display: block; margin-bottom: 5px;font-size: 15px;}
-.signUpArea .input-style{width: 350px; height: 40px;border: 1px solid #ddd;margin-right: 5px; padding: 3px 10px;font-size:13px;box-sizing: border-box;}
-.signUpArea .input-style2{height: 40px;border: 1px solid #ddd; width:113px; padding: 3px 10px;font-size:13px;box-sizing: border-box;}
-.signUpArea .btn-style{width: 20%; height: 40px; background: #fff; border: 1px solid #ddd; color: #959595;box-sizing: border-box;}
+.signUpArea .input-style{width: 350px; height: 36px;border: 1px solid #ddd;margin-right: 5px; padding: 3px 10px;font-size:13px;box-sizing: border-box;}
+.signUpArea .input-style2{height: 36px;border: 1px solid #ddd; width:113px; padding: 3px 10px;font-size:13px;box-sizing: border-box;}
+.signUpArea .btn-style{width: 20%; height: 36px; background: #fff; border: 1px solid #ddd; color: #959595;box-sizing: border-box;}
 .signUpArea .submit-style{width: 100%; height: 50px; background: #000; color: #fff;font-size: 15px;}
 .signUpArea .select-style{width: 100px; height: 40px; border: 1px solid #ddd;}
 .signUpArea .help-style{margin-top: 5px; display: block;font-size: 12px; color: #959595; letter-spacing: 1px;}

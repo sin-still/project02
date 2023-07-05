@@ -106,6 +106,8 @@ function signUp() {
     let $emailMes = document.getElementById('emailMes');
     let $birthMes = document.getElementById('birthMes');
 
+    const signBt = document.getElementById('signUp-summit')
+
     const idRule = /^[a-z0-9]{4,16}$/;
     const pwRule = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^])[a-zA-Z\d!@#$%^]{8,16}$/;
     const nameRule = /^[A-Za-z가-힣]{1,20}$/;
@@ -284,4 +286,40 @@ function signUp() {
         checkbox.checked = allCheck.checked;
       });
     });
+    checkboxes.forEach(function(checkbox) {
+        checkbox.addEventListener('change', function() {
+          // 체크박스 중 하나라도 체크가 안된 경우 allCheck 체크를 해제합니다.
+          if (!this.checked) {
+            allCheck.checked = false;
+          }
+        });
+    });
+
+    signBt.addEventListener('click', function (event) {
+        event.preventDefault(); // 기본 동작(페이지 이동)을 막습니다.
+    
+        // 모든 유효성 검사를 확인합니다.
+        if (
+          idRule.test($idArea.value) &&
+          pwRule.test($pwArea.value) &&
+          $pwArea.value === $pwArea2.value &&
+          nameRule.test($nameArea.value) &&
+          adrRule.test($adrArea1.value) &&
+          $adrArea2.value !== '' &&
+          phoneRule1.test($phoneArea1.value) &&
+          phoneRule2.test($phoneArea2.value) &&
+          emailRule.test($emailArea.value) &&
+          birthRule.test($birthArea.value) &&
+          $terms1.checked &&
+          $terms2.checked
+        ) {
+          // 모든 유효성 검사가 통과된 경우 회원가입 완료 얼럿 창을 띄웁니다.
+          alert('회원가입이 완료되었습니다.');
+          window.location.href = '../index.html';
+        } else {
+          // 유효성 검사에 실패한 항목이 있는 경우 오류 메시지를 표시하고 폼 제출을 막습니다.
+          alert('빈 항목이 있는지 확인해주세요.');
+          
+        }
+      });
 }  
