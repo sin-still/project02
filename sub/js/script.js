@@ -61,6 +61,7 @@ function loginPage() {
     const mLoginPageBt = document.querySelector('.m-loginPageBt')
     const mobileMenu = document.querySelector('.mobile');
     const mobileBg = document.querySelector('.mobile-bg');
+    const loginclose = document.querySelector('.loginPage-close');
 
     loginBtn.addEventListener('click', function () {
         loginBg.classList.add('active')
@@ -76,6 +77,10 @@ function loginPage() {
         mobileBg.classList.remove('active')
         mobileMenu.classList.remove('active')
     })
+    loginclose.addEventListener('click',function(){
+      loginBg.classList.remove('active')
+      loginPage.classList.remove('active')
+    })  
 
 }
 loginPage()
